@@ -2,6 +2,8 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  height: 100vh;
+  box-sizing: border-box;
 }
 .navbar {
   width: 100%; /* Ensure full width */
