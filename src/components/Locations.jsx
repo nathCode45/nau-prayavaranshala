@@ -4,20 +4,36 @@ import Card from 'react-bootstrap/Card';
 import "leaflet/dist/leaflet.css";
 
 const Locations = () => {
+    //L.marker(L.latLng(23.1686, 79.9339)).addTo(useMap());
+
+    const locations= [
+      [23.222, 80],
+      [23.099, 79.33],
+      [23.301, 79.99],
+      [23.503, 80.01],
+      [23.485, 80.2]
+    ];
+
+    const markers = Array.from({length: 5}, (_,i)=>({
+      id: i,
+      position: locations[i],
+      icon: L.icon({ iconUrl: 'https://leafletjs.com/examples/custom-icons/leaf-green.png', iconSize: [38, 38]}),
+      label: 'Marker $i'
+    }));
+
     return(
       <div style={{ height: '100vh' }}>
         <h1>Locations</h1>
-        <p>Content here.</p>
 
         <Card>
               <Card.Header>
-                <h4>Map Example with React-Leaflet</h4>
+                <h4>Map of NAU locations</h4>
               </Card.Header>
               <Card.Body>
                 {/* React-Leaflet Map */}
                 <MapContainer
-                  center={[51.505, -0.09]} 
-                  zoom={13}
+                  center={[23.1686, 79.9339]} 
+                  zoom={5}
                   style={{ height: '400px', width: '100%' }} // Custom height for the map
                 >
                   {/* OpenStreetMap tile layer */}
@@ -32,6 +48,11 @@ const Locations = () => {
                       A pretty CSS3 popup. <br /> Easily customizable.
                     </Popup>
                   </Marker>
+                  {markers.map((marker) => (
+                    <Marker key={marker.id} position={marker.position}>
+                      <Popup>{marker.label}</Popup>
+                    </Marker>
+                  ))}
                 </MapContainer>
               </Card.Body>
               <Card.Footer>
