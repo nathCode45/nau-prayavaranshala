@@ -5,6 +5,7 @@ import "leaflet/dist/leaflet.css";
 
 const Locations = () => {
     //L.marker(L.latLng(23.1686, 79.9339)).addTo(useMap());
+    // test
 
     const locations= [
       [23.222, 80],
