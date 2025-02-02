@@ -5,20 +5,37 @@ import "leaflet/dist/leaflet.css";
 
 const Locations = () => {
     //L.marker(L.latLng(23.1686, 79.9339)).addTo(useMap());
+    // test
 
     const locations= [
-      [23.222, 80],
-      [23.099, 79.33],
-      [23.301, 79.99],
-      [23.503, 80.01],
-      [23.485, 80.2]
+      [22.43722, 73.25139],
+      [22.46500, 73.26556],
+      [22.46972, 73.23861],
+      [22.47972, 73.22972],
+      [22.37889, 73.26000],
+      [22.43889, 73.19389],
+      [22.44306, 73.18528],
+      [22.48056, 73.18778],
+      [22.42917, 73.24194]
     ];
 
-    const markers = Array.from({length: 5}, (_,i)=>({
+    const locationsNames = [
+      "Madi Mahaula",
+      "Ganeshnagar",
+      "Gorwa Gaam",
+      "Garasiya, Rushinagar",
+      "Panchavati",
+      "Laxmipura",
+      "Dharampura",
+      "Ashirwaadnagar",
+      "Ambe Vada"
+    ]
+
+    const markers = Array.from({length: 9}, (_,i)=>({
       id: i,
       position: locations[i],
       icon: L.icon({ iconUrl: 'https://leafletjs.com/examples/custom-icons/leaf-green.png', iconSize: [38, 38]}),
-      label: 'Marker $i'
+      label: locationsNames[i]
     }));
 
     return(
@@ -32,9 +49,9 @@ const Locations = () => {
               <Card.Body>
                 {/* React-Leaflet Map */}
                 <MapContainer
-                  center={[23.1686, 79.9339]} 
-                  zoom={5}
-                  style={{ height: '400px', width: '100%' }} // Custom height for the map
+                  center={[22.4, 73.2]} 
+                  zoom={10}
+                  style={{ height: '600px', width: '100%' }} // Custom height for the map
                 >
                   {/* OpenStreetMap tile layer */}
                   <TileLayer
@@ -42,12 +59,6 @@ const Locations = () => {
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                   />
 
-                  {/* Marker with Popup */}
-                  <Marker position={[51.505, -0.09]} icon={L.icon({ iconUrl: 'https://leafletjs.com/examples/custom-icons/leaf-green.png', iconSize: [38, 38] })}>
-                    <Popup>
-                      A pretty CSS3 popup. <br /> Easily customizable.
-                    </Popup>
-                  </Marker>
                   {markers.map((marker) => (
                     <Marker key={marker.id} position={marker.position}>
                       <Popup>{marker.label}</Popup>
@@ -59,19 +70,6 @@ const Locations = () => {
                 
               </Card.Footer>
             </Card>
-
-
-        {/* <MapContainer style= {{height: '100%'}} center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
-          <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-          <Marker position={[51.505, -0.09]}>
-            <Popup>
-              A pretty CSS3 popup. <br /> Easily customizable.
-            </Popup>
-          </Marker>
-        </MapContainer> */}
       </div>
     );
 };
