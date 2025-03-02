@@ -15,8 +15,9 @@ const Locations = () => {
             id: location.id,
             position: location.position,
             label: location.label,
-            imageUrl: location.imageUrl, // Add this line
-            link: location.link, // Add this line
+            imageUrl: location.imageUrl, 
+            link: location.link, 
+            description: location.description,
             icon: L.icon({
               iconUrl: "https://leafletjs.com/examples/custom-icons/leaf-green.png",
               iconSize: [38, 38],
@@ -51,11 +52,12 @@ const Locations = () => {
             {locations.map((marker) => (
               <Marker key={marker.id} position={marker.position}>
                 <Popup>
-                  <div style={{ width: '200px' }}> {/* Increase the width of the popup */}
+                  <div style={{ width: '250px' }}> {/* Increase the width of the popup */}
                     <h3>{marker.label}</h3>
                     <img src={marker.imageUrl} alt={marker.label} style={{ width: '100%', height: 'auto' }} /> {/* Maintain aspect ratio */}
                     <br />
-                    <a href={marker.link} target="_blank" rel="noopener noreferrer">More Info</a>
+                    <a href={marker.link} target="_blank" rel="noopener noreferrer">Google Maps Link</a>
+                    <p>{marker.description}</p>
                   </div>
                 </Popup>
               </Marker>
