@@ -1,77 +1,74 @@
-import React from "react";
-import { MapContainer, TileLayer, useMap, Marker, Popup } from 'react-leaflet';
+import React, { useEffect, useState } from "react";
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import Card from 'react-bootstrap/Card';
 import "leaflet/dist/leaflet.css";
 
 const Locations = () => {
-    //L.marker(L.latLng(23.1686, 79.9339)).addTo(useMap());
-    // test
+  const [locations, setLocations] = useState([]);
 
-    const locations= [
-      [22.43722, 73.25139],
-      [22.46500, 73.26556],
-      [22.46972, 73.23861],
-      [22.47972, 73.22972],
-      [22.37889, 73.26000],
-      [22.43889, 73.19389],
-      [22.44306, 73.18528],
-      [22.48056, 73.18778],
-      [22.42917, 73.24194]
-    ];
+  useEffect(() => {
+    fetch("/locations.json") // Ensure this file is served correctly in your public folder
+      .then((response) => response.json())
+      .then((data) => {
+        setLocations(
+          data.map((location) => ({
+            id: location.id,
+            position: location.position,
+            label: location.label,
+            imageUrl: location.imageUrl, 
+            link: location.link, 
+            description: location.description,
+            icon: L.icon({
+              iconUrl: "https://leafletjs.com/examples/custom-icons/leaf-green.png",
+              iconSize: [38, 38],
+            }),
+          }))
+        );
+      })
+      .catch((error) => console.error("Error fetching locations:", error));
+  }, []);
 
-    const locationsNames = [
-      "Madi Mahaula",
-      "Ganeshnagar",
-      "Gorwa Gaam",
-      "Garasiya, Rushinagar",
-      "Panchavati",
-      "Laxmipura",
-      "Dharampura",
-      "Ashirwaadnagar",
-      "Ambe Vada"
-    ]
+  return (
+    <div style={{ height: '100vh' }}>
+      <h1 className="p-3">Locations</h1>
 
-    const markers = Array.from({length: 9}, (_,i)=>({
-      id: i,
-      position: locations[i],
-      icon: L.icon({ iconUrl: 'https://leafletjs.com/examples/custom-icons/leaf-green.png', iconSize: [38, 38]}),
-      label: locationsNames[i]
-    }));
+      <Card>
+        <Card.Header style={{ padding: '20px' }}>
+          <h4>Map of NAU locations</h4>
+        </Card.Header>
+        <Card.Body>
+          {/* React-Leaflet Map */}
+          <MapContainer
+            center={[22.4, 73.2]}
+            zoom={11}
+            style={{ height: '600px', width: '100%' }} // Custom height for the map
+          >
+            {/* OpenStreetMap tile layer */}
+            <TileLayer
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            />
 
-    return(
-      <div style={{ height: '100vh' }}>
-        <h1>Locations</h1>
-
-        <Card>
-              <Card.Header>
-                <h4>Map of NAU locations</h4>
-              </Card.Header>
-              <Card.Body>
-                {/* React-Leaflet Map */}
-                <MapContainer
-                  center={[22.4, 73.2]} 
-                  zoom={10}
-                  style={{ height: '600px', width: '100%' }} // Custom height for the map
-                >
-                  {/* OpenStreetMap tile layer */}
-                  <TileLayer
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                  />
-
-                  {markers.map((marker) => (
-                    <Marker key={marker.id} position={marker.position}>
-                      <Popup>{marker.label}</Popup>
-                    </Marker>
-                  ))}
-                </MapContainer>
-              </Card.Body>
-              <Card.Footer>
-                
-              </Card.Footer>
-            </Card>
-      </div>
-    );
+            {locations.map((marker) => (
+              <Marker key={marker.id} position={marker.position}>
+                <Popup>
+                  <div style={{ width: '250px' }}> {/* Increase the width of the popup */}
+                    <h3>{marker.label}</h3>
+                    <img src={marker.imageUrl} alt={marker.label} style={{ width: '100%', height: 'auto' }} /> {/* Maintain aspect ratio */}
+                    <br />
+                    <a href={marker.link} target="_blank" rel="noopener noreferrer">Google Maps Link</a>
+                    <p>{marker.description}</p>
+                  </div>
+                </Popup>
+              </Marker>
+            ))}
+          </MapContainer>
+        </Card.Body>
+        <Card.Footer>
+        </Card.Footer>
+      </Card>
+    </div>
+  );
 };
 
 export default Locations;

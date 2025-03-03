@@ -1,4 +1,5 @@
 import React from 'react';
+import nau_logo from '../assets/nau_logo.png';
 import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
@@ -6,6 +7,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
+          <img src={nau_logo} alt="Logo" style={{ marginRight: '10px', height: '30px', width: 'auto' }} />
           Prayavaranshala
         </a>
         <button

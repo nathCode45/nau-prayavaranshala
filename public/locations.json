@@ -1,0 +1,74 @@
+[
+    {
+      "id": 1,
+      "link": "https://www.google.com/maps/place/22%C2%B019'43.4%22N+73%C2%B009'36.5%22E/@22.3287428,73.1597955,203m/data=!3m1!1e3!4m4!3m3!8m2!3d22.3287222!4d73.1601389?hl=en&entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+      "position": [22.43722, 73.25139],
+      "label": "Madi Mahaula",
+      "imageUrl": "https://cdn.pixabay.com/photo/2017/07/04/15/43/butterfly-2471495_1280.jpg",
+      "description": "Madi Mahaula is a vibrant neighborhood known for its bustling markets and rich cultural heritage. The area is home to a diverse community and offers a mix of traditional and modern amenities."
+    },
+    {
+      "id": 2,
+      "link": "https://www.google.com/maps/place/22%C2%B019'43.4%22N+73%C2%B009'36.5%22E/@22.3287428,73.1597955,203m/data=!3m1!1e3!4m4!3m3!8m2!3d22.3287222!4d73.1601389?hl=en&entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+      "position": [22.46500, 73.26556],
+      "label": "Ganeshnagar",
+      "imageUrl": "https://cdn.pixabay.com/photo/2017/07/04/15/43/butterfly-2471495_1280.jpg",
+      "description": "Ganeshnagar is a peaceful residential area with a strong sense of community. It is known for its well-maintained parks and recreational facilities, making it a great place for families."
+    },
+    {
+      "id": 3,
+      "link": "https://www.google.com/maps/place/22%C2%B019'43.4%22N+73%C2%B009'36.5%22E/@22.3287428,73.1597955,203m/data=!3m1!1e3!4m4!3m3!8m2!3d22.3287222!4d73.1601389?hl=en&entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+      "position": [22.46972, 73.23861],
+      "label": "Gorwa Gaam",
+      "imageUrl": "https://cdn.pixabay.com/photo/2017/07/04/15/43/butterfly-2471495_1280.jpg",
+      "description": "Gorwa Gaam is a historic village that has retained its traditional charm. The area is surrounded by lush greenery and offers a serene environment away from the hustle and bustle of the city."
+    },
+    {
+      "id": 4,
+      "link": "https://www.google.com/maps/place/22%C2%B019'43.4%22N+73%C2%B009'36.5%22E/@22.3287428,73.1597955,203m/data=!3m1!1e3!4m4!3m3!8m2!3d22.3287222!4d73.1601389?hl=en&entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+      "position": [22.47972, 73.22972],
+      "label": "Garasiya, Rushinagar",
+      "imageUrl": "https://cdn.pixabay.com/photo/2017/07/04/15/43/butterfly-2471495_1280.jpg",
+      "description": "Garasiya, Rushinagar is a vibrant locality known for its cultural diversity and community events. The area is well-connected and offers a range of amenities for residents."
+    },
+    {
+      "id": 5,
+      "link": "https://www.google.com/maps/place/22%C2%B019'43.4%22N+73%C2%B009'36.5%22E/@22.3287428,73.1597955,203m/data=!3m1!1e3!4m4!3m3!8m2!3d22.3287222!4d73.1601389?hl=en&entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+      "position": [22.37889, 73.26000],
+      "label": "Panchavati",
+      "imageUrl": "https://cdn.pixabay.com/photo/2017/07/04/15/43/butterfly-2471495_1280.jpg",
+      "description": "Panchavati is a bustling commercial area known for its shopping centers and entertainment options. The locality is popular among young professionals and families alike."
+    },
+    {
+      "id": 6,
+      "link": "https://www.google.com/maps/place/22%C2%B019'43.4%22N+73%C2%B009'36.5%22E/@22.3287428,73.1597955,203m/data=!3m1!1e3!4m4!3m3!8m2!3d22.3287222!4d73.1601389?hl=en&entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+      "position": [22.43889, 73.19389],
+      "label": "Laxmipura",
+      "imageUrl": "https://cdn.pixabay.com/photo/2017/07/04/15/43/butterfly-2471495_1280.jpg",
+      "description": "Laxmipura is a residential neighborhood known for its friendly community and affordable housing options. The area is well-connected to the rest of the city and offers a range of amenities."
+    },
+    {
+      "id": 7,
+      "link": "https://www.google.com/maps/place/22%C2%B019'43.4%22N+73%C2%B009'36.5%22E/@22.3287428,73.1597955,203m/data=!3m1!1e3!4m4!3m3!8m2!3d22.3287222!4d73.1601389?hl=en&entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+      "position": [22.44306, 73.18528],
+      "label": "Dharampura",
+      "imageUrl": "https://cdn.pixabay.com/photo/2017/07/04/15/43/butterfly-2471495_1280.jpg",
+      "description": "Dharampura is a historic neighborhood with a rich cultural heritage. The area is known for its traditional architecture and vibrant festivals, making it a unique place to live."
+    },
+    {
+      "id": 8,
+      "link": "https://www.google.com/maps/place/22%C2%B019'43.4%22N+73%C2%B009'36.5%22E/@22.3287428,73.1597955,203m/data=!3m1!1e3!4m4!3m3!8m2!3d22.3287222!4d73.1601389?hl=en&entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+      "position": [22.48056, 73.18778],
+      "label": "Ashirwaadnagar",
+      "imageUrl": "https://cdn.pixabay.com/photo/2017/07/04/15/43/butterfly-2471495_1280.jpg",
+      "description": "Ashirwaadnagar is a modern residential area with a range of amenities and facilities. The locality is known for its well-planned infrastructure and green spaces, making it a desirable place to live."
+    },
+    {
+      "id": 9,
+      "link": "https://www.google.com/maps/place/22%C2%B019'43.4%22N+73%C2%B009'36.5%22E/@22.3287428,73.1597955,203m/data=!3m1!1e3!4m4!3m3!8m2!3d22.3287222!4d73.1601389?hl=en&entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+      "position": [22.42917, 73.24194],
+      "label": "Ambe Vada",
+      "imageUrl":"https://cdn.pixabay.com/photo/2017/07/04/15/43/butterfly-2471495_1280.jpg",
+      "description": "Ambe Vada is a vibrant neighborhood known for its lively atmosphere and community events. The area is home to a mix of residential and commercial properties, making it a bustling hub of activity."
+    }
+  ]
