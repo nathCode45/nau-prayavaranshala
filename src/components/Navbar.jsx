@@ -1,5 +1,5 @@
 import React from 'react';
-import nau_logo from '../assets/nau_logo.png';
+import nau_logo from '../assets/nau_logo_removed_bg.png';
 import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {

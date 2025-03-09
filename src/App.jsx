@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import React from 'react';
 import Contact from './components/Contact';
 import ImpactCreated from './components/ImpactCreated';
+import ProjectDetails from './components/ProjectDetails';
 import AboutUs from './components/AboutUs';
 import Home from './components/Home';
 import KnowledgeLibrary from './components/KnowledgeLibrary';
@@ -25,6 +26,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/knowledge-library" element={<KnowledgeLibrary/>}/>
             <Route path="/locations" element={<Locations/>}/>
+            <Route path="/project/:id" element={<ProjectDetails />} />
           </Routes>
         </div>
       </div>
