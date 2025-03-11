@@ -33,7 +33,7 @@ const Locations = () => {
       <h1 className="p-3">Locations</h1>
 
       <Card className="custom-card">
-        <Card.Header style={{ padding: '20px' }}>
+        <Card.Header className = "text-center" style={{ padding: '20px' }}>
           <h4>Map of NAU locations</h4>
         </Card.Header>
         <Card.Body>

@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap');
+
 :root {
-  --bs-navbar-bg: #A5D6A7; /* Change this to your desired background color */
+  --bs-navbar-bg: #c7c6b4; /* Change this to your desired background color */
   --bs-navbar-color: #ffffff; /* Change this to your desired text color */
   --bs-navbar-hover-color: #cccccc; /* Change this to your desired hover text color */
-  --site-bg-color: #E8F5E9;
-  --card-bg-color: #A5D6A7;
+  --site-bg-color: #ffffff;
+  --card-bg-color: #f3f2ef;
+  --site-font-family: 'Domine';
 }
 
 #root {
@@ -17,6 +20,7 @@ html, body {
   height: 100%;
   margin: 0;
   background-color: var(--site-bg-color);
+  font-family: var(--site-font-family);
 }
 
 .bg-custom {

@@ -82,7 +82,7 @@ const CaseDetails = () => {
         <h4 style={headerStyle}>Description:</h4>
         <p>{current_case.description}</p>
         
-        <h4 style={headerStyle}>Images:</h4>
+        <h4 style={{marginTop:'80px'}}>Images:</h4>
         <div className="container-fluid">
           <div className="row g-1" style={{ width: '80%', margin: '0 auto' }}>
             {current_case.images && current_case.images.map((image, index) => (

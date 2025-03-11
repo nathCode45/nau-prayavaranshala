@@ -95,8 +95,8 @@ const ProjectDetails = () => {
             <img src={current_project.after_image} alt="After Project Image" className="img-fluid" style={imageStyle} />
         </div>
       </div>
-      <h4 style={headerStyle}>Images:</h4>
-      <div className="container-fluid">
+      <h4 style={{marginTop: '80px'}}>Images:</h4>
+      <div className="container-fluid" style={{marginBottom:'80px'}}>
         <div className="row g-1" style={{ width: '80%', margin: '0 auto' }}>
           {current_project.images && current_project.images.map((image, index) => (
             <div className="col-4" key={index}>
