@@ -1,14 +1,44 @@
+:root {
+  --bs-navbar-bg: #A5D6A7; /* Change this to your desired background color */
+  --bs-navbar-color: #ffffff; /* Change this to your desired text color */
+  --bs-navbar-hover-color: #cccccc; /* Change this to your desired hover text color */
+  --site-bg-color: #E8F5E9;
+  --card-bg-color: #A5D6A7;
+}
+
 #root {
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
   height: 100vh;
   box-sizing: border-box;
+
 }
-.navbar {
-  width: 100%; /* Ensure full width */
+
+html, body {
+  height: 100%;
   margin: 0;
-  padding: 0;
+  background-color: var(--site-bg-color);
+}
+
+.bg-custom {
+  background-color: var(--bs-navbar-bg) !important;
+}
+
+.navbar{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.navbar-brand,
+.nav-link {
+  color: var(--bs-navbar-color) !important;
+}
+
+.nav-link:hover {
+  color: var(--bs-navbar-hover-color) !important;
+}
+
+.custom-card {
+  background-color: var(--card-bg-color) !important;
 }
 
 .logo {
@@ -17,9 +47,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -39,27 +71,8 @@
   }
 }
 
-.card {
-  padding: 2em;
-}
-
 .read-the-docs {
   color: #888;
 }
 
 
-html, body {
-  height: 100%;
-  margin: 0;
-}
-
-.container {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.container > .row {
-  flex-grow: 1;
-  overflow: auto;
-}

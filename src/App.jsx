@@ -15,19 +15,18 @@ import CaseDetails from './components/CaseDetails';
 import Footer from './components/Footer';
 
 function App() {
-
-  return (    
+  return (
     <Router>
-      <div className="container-fluid">
+      <div className="d-flex flex-column">
         <Navbar />
-        <div className="container">
-          <Routes> {/* Use Routes to define the different routes */}
+        <div className="container flex-grow-1">
+          <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/impact-created" element={<ImpactCreated />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/knowledge-library" element={<KnowledgeLibrary/>}/>
-            <Route path="/locations" element={<Locations/>}/>
+            <Route path="/knowledge-library" element={<KnowledgeLibrary />} />
+            <Route path="/locations" element={<Locations />} />
             <Route path="/project/:id" element={<ProjectDetails />} />
             <Route path="/case_study/:id" element={<CaseDetails />} />
           </Routes>
@@ -35,9 +34,7 @@ function App() {
         <Footer />
       </div>
     </Router>
-    
-      
-  )
+  );
 }
 
-export default App
+export default App;

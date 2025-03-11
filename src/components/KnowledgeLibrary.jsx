@@ -115,7 +115,7 @@ const KnowledgeLibrary = () => {
           {selectedItem === "Pilot Projects" ? (
             pilot_projects.map((project) => (
               <div className="col" key={project.id} onClick={() => handlePilotProjectClick(project.id)}>
-                <div className="card shadow-sm">
+                <div className="card shadow-sm custom-card">
                   <img src={project.main_image} alt={project.title} className="bd-placeholder-img card-img-top" style={imageStyle} />
                   <div className="card-body">
                     <p className="card-text">{project.title}</p>
@@ -126,7 +126,7 @@ const KnowledgeLibrary = () => {
           ) : selectedItem === "Research" ? (
             research.map((research) => (
               <div className="col" key={research.id} onClick={() => handleResearchClick(research.link)}>
-                <div className="card shadow-sm">
+                <div className="card shadow-sm custom-card">
                   <img src={research.image} alt={research.title} className="bd-placeholder-img card-img-top" style={imageStyle} />
                   <div className="card-body">
                     <p className="card-text">{research.title}</p>
@@ -137,7 +137,7 @@ const KnowledgeLibrary = () => {
           ) : selectedItem === "Case Studies" ? (
             case_studies.map((case_study) => (
               <div className="col" key={case_study.id} onClick={() => handleCaseStudyClick(case_study.id)}>
-                <div className="card shadow-sm">
+                <div className="card shadow-sm custom-card">
                   <img src={case_study.main_image} alt={case_study.title} className="bd-placeholder-img card-img-top" style={imageStyle} />
                   <div className="card-body">
                     <p className="card-text">{case_study.title}</p>
@@ -147,7 +147,7 @@ const KnowledgeLibrary = () => {
             ))
           ) : (
             <div className="col">
-              <div className="card shadow-sm">
+              <div className="card shadow-sm custom-card">
                 <svg className="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
                 <div className="card-body">
                   <p className="card-text">Default content goes here. This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>

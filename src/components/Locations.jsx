@@ -32,7 +32,7 @@ const Locations = () => {
     <div style={{ height: '100vh' }}>
       <h1 className="p-3">Locations</h1>
 
-      <Card>
+      <Card className="custom-card">
         <Card.Header style={{ padding: '20px' }}>
           <h4>Map of NAU locations</h4>
         </Card.Header>
