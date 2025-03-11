@@ -11,6 +11,8 @@ import AboutUs from './components/AboutUs';
 import Home from './components/Home';
 import KnowledgeLibrary from './components/KnowledgeLibrary';
 import Locations from './components/Locations';
+import CaseDetails from './components/CaseDetails';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -27,8 +29,10 @@ function App() {
             <Route path="/knowledge-library" element={<KnowledgeLibrary/>}/>
             <Route path="/locations" element={<Locations/>}/>
             <Route path="/project/:id" element={<ProjectDetails />} />
+            <Route path="/case_study/:id" element={<CaseDetails />} />
           </Routes>
         </div>
+        <Footer />
       </div>
     </Router>
     
