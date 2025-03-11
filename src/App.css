@@ -79,4 +79,10 @@ html, body {
   color: #888;
 }
 
+.favicon {
+  width: auto;
+  height: auto;
+  object-fit: contain; /* Ensure the image maintains its aspect ratio */
+}
+
 
