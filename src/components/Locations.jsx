@@ -29,7 +29,7 @@ const Locations = () => {
   }, []);
 
   return (
-    <div style={{ height: '100vh' }}>
+    <div className = "container flex-grow-1" style={{ height: '100vh' }}>
       <h1 className="p-3">Locations</h1>
 
       <Card className="custom-card">

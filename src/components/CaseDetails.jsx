@@ -71,7 +71,8 @@ const CaseDetails = () => {
   };
 
   return (
-    <div className= "d-flex flex-column flex-grow-1" style={{ height: '100vh', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+    <div className="container flex-grow-1">
+      <div className= "d-flex flex-column flex-grow-1" style={{ height: '100vh', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
       <div style={{ flex: '1 1 auto', overflowY: 'auto', padding: '1rem' }}>
         <h1>{current_case.title}</h1>
         <p className="lead">{current_case.short_description}</p>
@@ -118,6 +119,9 @@ const CaseDetails = () => {
         </Modal.Body>
       </Modal>
     </div>
+
+    </div>
+    
   );
 };
 

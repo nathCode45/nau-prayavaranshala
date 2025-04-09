@@ -93,7 +93,8 @@ const KnowledgeLibrary = () => {
   };
 
   return (
-    <div className="d-flex flex-column flex-grow-1">
+    <div className="container flex-grow-1">
+      <div className="d-flex flex-column flex-grow-1">
       <div className="d-flex align-items-center justify-content-between gap-4 p-4">
         <h1 className="p-3">{selectedItem}</h1>
         <div className="dropdown">
@@ -158,6 +159,8 @@ const KnowledgeLibrary = () => {
         </div>
       </div>
     </div>
+    </div>
+    
   );
 };
 

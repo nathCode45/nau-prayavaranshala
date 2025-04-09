@@ -76,7 +76,8 @@ const ProjectDetails = () => {
   };
 
   return (
-    <div className="d-flex flex-column align-items-start p-3 flex-grow-1">
+    <div className="container flex-grow-1">
+       <div className="d-flex flex-column align-items-start p-3 flex-grow-1">
       <h1>{current_project.title}</h1>
       <p className="lead">{current_project.short_description}</p>
       <h4 style={headerStyle}>Status: </h4>
@@ -136,6 +137,8 @@ const ProjectDetails = () => {
         </Modal.Body>
       </Modal>
     </div>
+    </div>
+   
   );
 };
 

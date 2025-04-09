@@ -5,7 +5,7 @@ import '../App.css';
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg bg-custom">
+    <nav className="navbar navbar-expand-lg bg-custom w-100">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
           <img src={"/nau_logo_public.png"} alt="Logo" style={{ marginRight: '10px', height: '30px', width: 'auto', marginLeft:'10px' }} />

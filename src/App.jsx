@@ -17,9 +17,9 @@ import Footer from './components/Footer';
 function App() {
   return (
     <Router>
-      <div className="d-flex flex-column">
+      <div className="d-flex flex-column align-items-center" style={{padding: "0", margin: "0"}}>
         <Navbar />
-        <div className="container flex-grow-1">
+        <div className="container-fluid"style={{padding: "0", margin: "0"}} >
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about-us" element={<AboutUs />} />
