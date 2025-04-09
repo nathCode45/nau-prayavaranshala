@@ -104,10 +104,10 @@ const Home = () => {
       width: "100vw",
       marginLeft: "0",
       marginRight: "0",
-      paddin: "0,"
+      //padding: "0,"
     },
     gridItem: {
-      border: "1px solid #ccc",
+      //border: "1px solid #ccc",
     },
   };
 
@@ -148,9 +148,17 @@ const Home = () => {
         <div style={styles.gridItem}>Item 5</div>
 
         {/* Second row */}
-        <div style={styles.gridItem}>Item 6</div>
+        <div style={styles.gridItem}>
+        <img
+            src="/case_study_cover.jpeg"
+            alt="Case Study Cover"
+            style={{ width: "100%", height: "auto", display: "block" }} // Maintain aspect ratio
+          />
+        </div>
         <div style={styles.gridItem}>Item 7</div>
-        <div style={styles.gridItem}>Item 8</div>
+        <div style={styles.gridItem}>
+          
+        </div>
         <div style={styles.gridItem}>Item 9</div>
         <div style={styles.gridItem}>Item 10</div>
       </div>

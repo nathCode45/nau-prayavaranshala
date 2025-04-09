@@ -8,7 +8,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg bg-custom w-100">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
-          <img src={"/nau_logo_public.png"} alt="Logo" style={{ marginRight: '10px', height: '30px', width: 'auto', marginLeft:'10px' }} />
+          <img src={"/nau_logo_new.png"} alt="Logo" style={{ marginRight: '10px', height: '30px', width: 'auto', marginLeft:'10px' }} />
           Prayavaranshala
         </a>
         <button
