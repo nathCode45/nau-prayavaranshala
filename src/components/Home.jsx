@@ -1,6 +1,11 @@
+import { icon } from "leaflet";
+import { useNavigate } from "react-router-dom";
 import React, { useEffect, useState } from "react";
+import { FaLeaf, FaBook, FaLightbulb, FaMapMarkerAlt, FaHandsHelping } from "react-icons/fa";
 
 const Home = () => {
+  const navigate = useNavigate();
+
   const [topImageUrl, setTopImageUrl] = useState("");
   const [paragraph1, setParagraph1] = useState("");
   const [researchDescription, setResearchDescription] = useState("");
@@ -61,6 +66,7 @@ const Home = () => {
       .catch((error) => console.error("Error fetching home.json:", error));
   }, []);
 
+
   const styles = {
     heroImage: {
       position: "relative",
@@ -70,11 +76,15 @@ const Home = () => {
       backgroundSize: "cover",
       backgroundPosition: "center",
     },
+    iconStyle: {
+      marginRight: "0.5rem",
+      color: "#38a169"
+    },
     heroTextbox: {
       position: "absolute",
       bottom: "20px",
       right: "20px",
-      backgroundColor: "rgba(0, 0, 0, 0.6)", // Semi-transparent background
+      backgroundColor: "rgba(0, 0, 0, 0.7)", // Semi-transparent background
       color: "white",
       padding: "10px 20px",
       borderRadius: "5px",
@@ -87,6 +97,7 @@ const Home = () => {
       lineHeight: "1.5em",
       marginLeft: "10px",
       textAlign: "right",
+      listStylePosition: "inside",
     },
     paragraphLeft: {
       marginTop: "20px",
@@ -124,8 +135,12 @@ const Home = () => {
       </style>
       <div style={styles.heroImage}>
         <div style={styles.heroTextbox}>
-          <h2>Welcome to Prayavaranshala</h2>
-          <p>Nature. Art. Us.</p>
+        <h1 style={{ fontSize: "2.5rem", borderBottom: "3px solid #9ae6b4", paddingBottom: "0.5rem" }}>
+          🌿 Welcome to Prayavaran Shala
+        </h1>
+        <p style={{ fontSize: "1.2rem", marginBottom: "2rem" }}>
+          Empowering the next generation to be environmental leaders through education, awareness, and action.
+        </p>
         </div>
       </div>
       <div style={styles.gridContainer}>
@@ -133,7 +148,7 @@ const Home = () => {
         <div style={styles.gridItem}>
           <p style={styles.paragraphLeft}>{paragraph1}</p>
         </div>
-        <div style={styles.gridItem}>Item 2</div>
+        <div style={styles.gridItem}></div>
         <div style={styles.gridItem}>
           <img
             src={researchImageUrl}
@@ -142,10 +157,28 @@ const Home = () => {
           />
         </div>
         <div style={styles.gridItem}>
-          <h2 style={{ textAlign: "right", marginRight: "20px" }}>Research</h2>
-          <p style={styles.paragraphRight}>{researchDescription}</p>
+          <div style={styles.paragraphRight}>
+            <h2><FaBook style={styles.iconStyle} /> Research</h2>
+            <ul>
+              <li>Biophilic design impact on early childhood development</li>
+              <li>Sustainable materials in educational environments</li>
+              <li>Integration of natural elements in learning spaces</li>
+              <li>Environmental education methodologies</li>
+            </ul>
+            {/* <button className="btn btn-primary"
+              onClick={() => navigate("/knowledge-library")} // Navigate to the "/research" page
+            >
+            Access The Research
+          </button> */}
+          </div>
+          
         </div>
-        <div style={styles.gridItem}>Item 5</div>
+        <div style={styles.gridItem}>
+          <div style ={styles.paragraphLeft}>
+            <h2><FaLightbulb style={styles.iconStyle} /> Case Studies</h2>
+            <p>{caseSudyDescription}</p>
+          </div>
+        </div>
 
         {/* Second row */}
         <div style={styles.gridItem}>
@@ -155,12 +188,32 @@ const Home = () => {
             style={{ width: "100%", height: "auto", display: "block" }} // Maintain aspect ratio
           />
         </div>
-        <div style={styles.gridItem}>Item 7</div>
         <div style={styles.gridItem}>
-          
+          <img
+            src="/pilot_project_1_photos/image_1.jpg"
+            alt="Case Study Cover"
+            style={{ width: "100%", height: "auto", display: "block" }} // Maintain aspect ratio
+          />
         </div>
-        <div style={styles.gridItem}>Item 9</div>
-        <div style={styles.gridItem}>Item 10</div>
+        <div style={styles.gridItem}>
+          <div style = {styles.paragraphRight}>
+            <h2><FaLeaf style={styles.iconStyle} /> Pilot Projects</h2>
+            <p>{pilotProjectDescription}</p>
+          </div>
+        </div>
+        <div style={styles.gridItem}>
+          <div style = {styles.paragraphLeft}>
+            <h2><FaLeaf style={styles.iconStyle} />Locations</h2>
+            <p>{locationDescription}</p>
+          </div>
+        </div>
+        <div style={styles.gridItem}>
+        <img
+            src="/case_study_2_photos/2_2.jpg"
+            alt="Case Study Cover"
+            style={{ width: "100%", height: "auto", display: "block" }} // Maintain aspect ratio
+          />
+        </div>
       </div>
     </div>
   );
