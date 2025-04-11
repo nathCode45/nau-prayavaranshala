@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+
 
 const AboutUs = () => {
   useEffect(() => {
@@ -15,6 +17,18 @@ const AboutUs = () => {
         padding: "40px 20px",
         fontFamily: "Arial, sans-serif",
     },
+    pic: {
+        width: "100%",
+        height: "200px",
+        display: "flex",
+   
+      },
+      pic2: {
+        width: "50%",
+        height: "320px",
+        display: "flex",
+   
+      },
     page: {
       padding: "40px 20px",
       fontFamily: "Arial, sans-serif",
@@ -87,13 +101,7 @@ const AboutUs = () => {
             <h2 style={styles.heading}>What is Prayavaranshala</h2>
             <div style={styles.card}>
             <p style={{ ...styles.paragraph, ...styles.textCenter }}>
-                Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in
-                laying out print, graphic or web designs. The passage is attributed to an
-                unknown typesetter in the 15th century who is thought to have scrambled
-                parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen
-                book. It usually begins with: <br /><br />
-                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua.”
+            The Prayavaran Shala (School for Environment) initiative is dedicated to integrating nature-based solutions (NbS) into government Anganwadi and schools, fostering an environment that connects children with nature while promoting sustainability, ecological learning, and well-being. In collaboration with Duke University's student club, the website will serve as a resource hub and a platform for research, case studies, and pilot projects. It aims to inspire stakeholders, educators, and policymakers to adopt nature-based approaches in school environments across India and beyond. 
             </p>
             <div style={styles.textRight}>
                 <a href="#foundation" style={styles.link}>NAU Foundation</a>
@@ -106,11 +114,19 @@ const AboutUs = () => {
             <div id="cfs-section">
             <h3 style={styles.subHeading}>Child-friendly school</h3>
             <div style={styles.card}>
-                <p style={styles.paragraph}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation
-                </p>
+            <div style={{ ...styles.card, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+        <div style={{ flex: 1 }}>
+            <p style={styles.paragraph}>
+
+            </p>
+            </div>
+            <img
+                src="/child.jpeg"
+                alt="Child-friendly school"
+                style={styles.pic2}
+            />
+            </div>
+
             </div>
             </div>
 
@@ -118,9 +134,12 @@ const AboutUs = () => {
             <h3 style={styles.subHeading}>Aanganwadi</h3>
             <div style={styles.card}>
                 <p style={styles.paragraph}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation
+                The anganwadi is designed with a circular layout, symbolizing unity, inclusivity and the natural cycle of learning. The round shape fosters a sense of security with a cocoon like embrace and allows for an efficient, flexible spatial arrangement that encourages interaction and movement. Large, open areas radiate from a central core, which serves as a gathering space, promoting collaboration among children and educators.
+                <img
+                src="public/aangwadi.jpeg" 
+                alt="Map of location"
+                style={styles.pic}
+                />
                 </p>
             </div>
             </div>
@@ -131,9 +150,7 @@ const AboutUs = () => {
             <h3 style={styles.subHeading}>Meet the Team</h3>
             <div style={styles.card}>
             <p style={styles.paragraph}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation
+                
             </p>
             <div style={styles.textRight}>
                 <a href="#team" style={styles.link}>Our Team</a>
@@ -146,11 +163,11 @@ const AboutUs = () => {
             <h3 style={styles.subHeading}>Connect</h3>
             <div style={styles.card}>
             <p style={styles.paragraph}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation
+               
             </p>
-            <a href="#contact" style={styles.link}>Contact us</a>
+            <div style={styles.textRight}>
+            <Link to="/contact" style={styles.link}>Contact us</Link>
+            </div>
             </div>
         </section>
        
