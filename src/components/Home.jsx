@@ -92,7 +92,7 @@ const Home = () => {
     paragraphRight: {
       marginTop: "20px",
       marginBottom: "20px",
-      paddingRight: "20px",
+      paddingRight: "50px",
       fontSize: "1.2em",
       lineHeight: "1.5em",
       marginLeft: "10px",
@@ -105,7 +105,7 @@ const Home = () => {
       paddingLeft: "20px",
       fontSize: "1.2em",
       lineHeight: "1.5em",
-      marginRight: "10px",
+      marginRight: "20px",
       textAlign: "left",
     },
     
