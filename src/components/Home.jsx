@@ -108,6 +108,7 @@ const Home = () => {
       marginRight: "10px",
       textAlign: "left",
     },
+    
     gridContainer: {
       display: "grid",
       gridTemplateColumns: "repeat(2, 1fr)", // 2 columns
@@ -198,13 +199,30 @@ const Home = () => {
         <div style={styles.gridItem}>
           <div style = {styles.paragraphRight}>
             <h2><FaLeaf style={styles.iconStyle} /> Pilot Projects</h2>
-            <p>{pilotProjectDescription}</p>
+            <p>{}</p>
+            <ul>
+              <li>Sustainable Building Materials Integration Program</li>
+              <li>Natural Playscape Development Initiative</li>
+              <li>Community Garden Learning Project</li>
+              <li>Zero-Waste Campus Initiative</li>
+            </ul>
           </div>
         </div>
         <div style={styles.gridItem}>
           <div style = {styles.paragraphLeft}>
             <h2><FaLeaf style={styles.iconStyle} />Locations</h2>
-            <p>{locationDescription}</p>
+            <p>{}</p>
+            <ul>
+              <li>Ashirwaadnagar </li>
+              <li>Garasiya, Rushinagar</li>
+              <li>Gorwa Gaam</li>
+              <li>Ganeshnagar</li>
+              <li>Dharampura </li>
+              <li>Laxmipura</li>
+              <li>Madi Mahaula</li>
+              <li>Ambe Vada</li>
+              <li>Panchavati</li>
+            </ul>
           </div>
         </div>
         <div style={styles.gridItem}>
