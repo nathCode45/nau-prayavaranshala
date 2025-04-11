@@ -61,7 +61,6 @@ const Contact = () => {
     <div style={styles.container}>
       <div style={styles.section}>
         <h1 style={styles.heading}>Contact Us</h1>
-        <p style={styles.text}>Home / Contact Us</p>
       </div>
 
       <div style={styles.section}>
