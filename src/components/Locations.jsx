@@ -4,6 +4,20 @@ import Card from 'react-bootstrap/Card';
 import "leaflet/dist/leaflet.css";
 
 const Locations = () => {
+  const styles = {
+    container: {
+        padding: "40px 20px",
+        fontFamily: "Arial, sans-serif",
+    },
+    section: {
+      marginBottom: "30px",
+    },
+    title: {
+        fontSize: "2rem",
+        borderBottom: "2px solid #ccc",
+        paddingBottom: "10px",
+      },
+  };
   const [locations, setLocations] = useState([]);
 
   useEffect(() => {
@@ -29,8 +43,10 @@ const Locations = () => {
   }, []);
 
   return (
-    <div className = "container flex-grow-1" style={{ height: '100vh' }}>
-      <h1 className="p-3">Locations</h1>
+    <div style={styles.container}>
+    <div style={styles.section}>
+        <h1 style={styles.title}>Locations</h1>
+    </div>
 
       <Card className="custom-card">
         <Card.Header className = "text-center" style={{ padding: '20px' }}>

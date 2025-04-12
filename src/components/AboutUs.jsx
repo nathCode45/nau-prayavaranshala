@@ -98,7 +98,7 @@ const AboutUs = () => {
         {/* What is Prayavaranshala Section */}
         <section id="what-is-section" style={styles.section}>
         
-            <h2 style={styles.heading}>What is Prayavaranshala</h2>
+            <h2 style={styles.heading}>What is Prayavaranshala?</h2>
             <div style={styles.card}>
             <p style={{ ...styles.paragraph, ...styles.textCenter }}>
             The Prayavaran Shala (School for Environment) initiative is dedicated to integrating nature-based solutions (NbS) into government Anganwadi and schools, fostering an environment that connects children with nature while promoting sustainability, ecological learning, and well-being. In collaboration with Duke University's student club, the website will serve as a resource hub and a platform for research, case studies, and pilot projects. It aims to inspire stakeholders, educators, and policymakers to adopt nature-based approaches in school environments across India and beyond. 

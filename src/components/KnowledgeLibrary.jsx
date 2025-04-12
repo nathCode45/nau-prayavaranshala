@@ -2,6 +2,22 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const KnowledgeLibrary = () => {
+  
+  const styles = {
+    container: {
+        padding: "40px 20px",
+        fontFamily: "Arial, sans-serif",
+    },
+    section: {
+      marginBottom: "10px",
+    },
+    title: {
+        fontSize: "2rem",
+        borderBottom: "2px solid #ccc",
+        paddingBottom: "8px",
+      },
+  };
+
   const [selectedItem, setSelectedItem] = useState("Pilot Projects");
   const [selectedDescription, setSelectedDescription] = useState("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.");
   const [pilot_projects, setPilotProjects] = useState([]);
@@ -92,7 +108,15 @@ const KnowledgeLibrary = () => {
     objectFit: 'cover', // Crop the image to fit the container
   };
 
+  
+
+
   return (
+    <div style={styles.container}>
+        <div style={styles.section}>
+            <h1 style={styles.title}>Knowledge Library</h1>
+        </div>
+    
     <div className="container flex-grow-1">
       <div className="d-flex flex-column flex-grow-1">
       <div className="d-flex align-items-center justify-content-between gap-4 p-4">
@@ -160,7 +184,7 @@ const KnowledgeLibrary = () => {
       </div>
     </div>
     </div>
-    
+    </div>
   );
 };
 
