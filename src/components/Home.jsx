@@ -158,7 +158,7 @@ const Home = () => {
           />
         </div>
         <div style={styles.gridItem}>
-          <div style={styles.paragraphRight}>
+          <div style={styles.paragraphLeft}>
             <h2><FaBook style={styles.iconStyle} /> Research</h2>
             <ul>
               <li>Biophilic design impact on early childhood development</li>
@@ -197,7 +197,7 @@ const Home = () => {
           />
         </div>
         <div style={styles.gridItem}>
-          <div style = {styles.paragraphRight}>
+          <div style = {styles.paragraphLeft}>
             <h2><FaLeaf style={styles.iconStyle} /> Pilot Projects</h2>
             <p>{}</p>
             <ul>

@@ -6,7 +6,7 @@ const KnowledgeLibrary = () => {
   const styles = {
     container: {
         padding: "40px 20px",
-        fontFamily: "Arial, sans-serif",
+        //fontFamily: "Arial, sans-serif",
     },
     section: {
       marginBottom: "10px",

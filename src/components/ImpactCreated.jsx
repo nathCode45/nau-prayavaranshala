@@ -4,7 +4,7 @@ const ImpactCreated = () => {
   const styles = {
     page: {
       padding: "40px 20px",
-      fontFamily: "Arial, sans-serif",
+      //fontFamily: "Arial, sans-serif",
     },
     section: {
       marginBottom: "50px",
